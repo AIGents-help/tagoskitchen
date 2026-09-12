@@ -1,0 +1,1 @@
+-- The helper returns membership only for auth.uid(); authenticated execution is intentional for RLS.\ngrant execute on function public.is_business_member(uuid) to authenticated;\n
