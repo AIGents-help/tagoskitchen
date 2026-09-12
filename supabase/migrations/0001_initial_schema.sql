@@ -110,13 +110,15 @@ create table public.bookings (
 );
 
 create table public.booking_resources (
-  booking_id uuid references public.bookings(id) on delete cascade,
+  id uuid primary key default gen_random_uuid(),
+  booking_id uuid not null references public.bookings(id) on delete cascade,
   resource_id uuid references public.equipment_resources(id),
   group_id uuid references public.equipment_groups(id),
-  hourly_rate_cents integer not null,
-  primary key (booking_id,resource_id,group_id),
+  hourly_rate_cents integer not null check (hourly_rate_cents >= 0),
   check ((resource_id is not null) <> (group_id is not null))
 );
+create unique index booking_resource_unique on public.booking_resources(booking_id,resource_id) where resource_id is not null;
+create unique index booking_group_unique on public.booking_resources(booking_id,group_id) where group_id is not null;
 
 create table public.client_payments (
   id uuid primary key default gen_random_uuid(),
@@ -185,3 +187,14 @@ create policy "members create client payments" on public.client_payments for ins
 -- Private credential files belong in a non-public Storage bucket named business-credentials.
 -- Service-role-only admin review, Stripe webhooks, overlap prevention, and audit writes
 -- are implemented in trusted server functions, never in the browser.
+
+insert into storage.buckets (id,name,public,file_size_limit,allowed_mime_types)
+values ('business-credentials','business-credentials',false,10485760,array['application/pdf','image/jpeg','image/png'])
+on conflict (id) do nothing;
+
+create policy "credential owners upload files" on storage.objects for insert to authenticated
+with check (bucket_id='business-credentials' and (storage.foldername(name))[1]=auth.uid()::text);
+create policy "credential owners read files" on storage.objects for select to authenticated
+using (bucket_id='business-credentials' and (storage.foldername(name))[1]=auth.uid()::text);
+create policy "credential owners delete files" on storage.objects for delete to authenticated
+using (bucket_id='business-credentials' and (storage.foldername(name))[1]=auth.uid()::text);
