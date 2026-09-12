@@ -1,0 +1,11 @@
+create policy platform_staff_no_direct_access on public.platform_staff for select to authenticated using(false);
+create index access_events_booking_idx on public.access_events(booking_id);
+create index access_events_user_idx on public.access_events(user_id);
+create index agreement_acceptances_version_idx on public.agreement_acceptances(agreement_version_id);
+create index agreement_acceptances_business_idx on public.agreement_acceptances(business_id);
+create index booking_checklists_completed_by_idx on public.booking_checklists(completed_by);
+create index bookings_agreement_acceptance_idx on public.bookings(agreement_acceptance_id);
+create index condition_reports_reported_by_idx on public.equipment_condition_reports(reported_by);
+create index condition_reports_resource_idx on public.equipment_condition_reports(resource_id);
+create index incident_reports_booking_idx on public.incident_reports(booking_id);
+create index incident_reports_reported_by_idx on public.incident_reports(reported_by);
