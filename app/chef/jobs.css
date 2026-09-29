@@ -1,0 +1,71 @@
+.job-list article {
+  align-items: start;
+}
+.job-list button {
+  border: 0;
+  border-radius: 9px;
+  background: #e9631e;
+  color: #fff;
+  padding: 11px 13px;
+  font-size: 15px;
+  font-weight: 900;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.chef-panel form > button.secondary-action {
+  background: #eee7dc;
+  color: #312d28;
+}
+.chef-match-handoff {
+  grid-column: 1/-1;
+  display: grid;
+  gap: 7px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #e8f6ee;
+  color: #174f32;
+}
+.chef-match-handoff > span {
+  color: #3d5c4b;
+}
+.chef-match-handoff > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chef-match-handoff a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: #174f32;
+  font-weight: 900;
+  text-decoration: none;
+}
+.chef-match-handoff svg {
+  width: 16px;
+  height: 16px;
+}
+.chef-match-handoff strong {
+  width: max-content;
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 13px;
+}
+.chef-match-handoff strong.paid {
+  background: #d7f0e1;
+  color: #145d39;
+}
+.chef-match-handoff strong.awaiting {
+  background: #fff0d8;
+  color: #87500b;
+}
+@media (max-width: 620px) {
+  .job-list button {
+    width: 100%;
+    min-height: 46px;
+  }
+}

@@ -1,0 +1,5 @@
+.top-actions > a { height: 40px; border-radius: 9px; padding: 0 15px; display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font-size: 13px; font-weight: 900; }
+.top-actions > a svg { width: 17px; }
+.login-button,.account-button { border: 1px solid #d8d2c8; color: #24221e; background: #fff; }
+.signup-button { border: 1px solid #ef6b21; color: #fff; background: #ef6b21; }
+@media(max-width:620px){.top-actions > a{padding:0 10px;font-size:12px}.top-actions > a svg{display:none}}

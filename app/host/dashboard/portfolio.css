@@ -1,0 +1,9 @@
+.kitchen-portfolio{display:grid;gap:8px;padding:14px 8px 18px;border-top:1px solid #3a3732;border-bottom:1px solid #3a3732;margin-bottom:15px}
+.kitchen-portfolio label{color:#d6d0c7;font-size:14px}
+.kitchen-portfolio select{min-height:44px;background:#2d2a26;border:1px solid #4b4740;color:#fff}
+.kitchen-portfolio>a{display:flex;align-items:center;justify-content:center;gap:7px;background:#ef6b21;color:#fff;text-decoration:none;border-radius:8px;padding:11px;font-weight:900}
+.kitchen-portfolio>a svg{width:18px}
+.kitchen-portfolio>a.fleet-link{background:#2d2a26;border:1px solid #4b4740}
+.kitchen-portfolio small{color:#aaa39a;text-align:center}
+.provider-main>header .header-add-kitchen{background:#ef6b21;color:#fff;padding:10px 13px;border-radius:8px}
+@media(max-width:620px){.provider-main>header .header-add-kitchen{font-size:0;padding:10px}.provider-main>header .header-add-kitchen svg{width:22px;height:22px}}

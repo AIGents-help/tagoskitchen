@@ -1,0 +1,36 @@
+.public-hero-visual{min-height:480px;padding:0;align-items:stretch;justify-content:flex-end;box-shadow:0 22px 55px #3a281526}
+.public-hero-visual:after{content:"";position:absolute;inset:0;width:auto;height:auto;border:0;border-radius:0;box-shadow:none;background:linear-gradient(180deg,transparent 38%,#15130fda 100%);z-index:1}
+.public-hero-visual .public-experience-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:none;transition:transform .8s ease}
+.public-hero-visual:hover .public-experience-photo{transform:scale(1.025)}
+.public-hero-visual .public-pin-guide{position:absolute;right:22px;top:20px;width:76px;z-index:3;filter:drop-shadow(0 12px 12px #0007);animation:public-pin-bob 2.8s ease-in-out infinite}
+.public-hero-visual .public-visual-caption{position:relative;z-index:2;text-align:left;align-items:flex-start;margin:0;padding:30px;gap:5px}
+.public-hero-visual .public-visual-caption b{font-size:30px}
+.public-hero-visual .public-visual-caption span{font-size:17px;color:#f6eee4}
+@keyframes public-pin-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+
+.tour-experience{max-width:1180px;min-height:470px;margin:24px auto 64px;border-radius:26px;overflow:hidden;position:relative;display:flex;align-items:flex-end;background:#1d1b18;box-shadow:0 24px 60px #4d351627}
+.tour-experience>img:first-child{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.tour-experience:hover>img:first-child{transform:scale(1.02)}
+.tour-experience:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#17140ff2 0%,#17140fbd 43%,transparent 80%)}
+.tour-experience-copy{position:relative;z-index:2;width:min(560px,72%);padding:44px;color:#fff}
+.tour-experience-copy>p{color:#ff7a3c;font-size:13px;font-weight:900;letter-spacing:2px}
+.tour-experience-copy h2{font:700 44px/1.03 Georgia,serif;margin:9px 0 15px}
+.tour-experience-copy>span{font-size:18px;line-height:1.55;color:#ede5d9}
+.tour-experience-copy>div{display:flex;align-items:center;gap:12px;margin-top:24px;color:#ff7a3c;letter-spacing:1.5px}
+.tour-experience-copy i{color:#fff;font-style:normal}
+.tour-pin-guide{position:absolute;z-index:3;right:28px;top:24px;width:78px;filter:drop-shadow(0 13px 13px #0008);animation:tour-pin-bob 2.8s ease-in-out infinite}
+.provider-visual{max-width:1180px;height:330px;margin:0 auto 54px;border-radius:24px;overflow:hidden;position:relative}
+.provider-visual>img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.provider-visual:hover>img{transform:scale(1.02)}
+.provider-visual>div{position:absolute;left:0;right:0;bottom:0;padding:34px;color:#fff;background:linear-gradient(transparent,#15130fe8);display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
+.provider-visual b{font:700 32px Georgia,serif}
+.provider-visual span{max-width:500px;font-size:17px;line-height:1.5;text-align:right}
+.tour-steps article{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.tour-steps article:hover{transform:translateY(-5px);box-shadow:0 14px 30px #55361618;border-color:#f0a27c}
+.tour-steps svg{transition:transform .2s ease}
+.tour-steps article:hover svg{transform:rotate(-4deg) scale(1.08)}
+@keyframes tour-pin-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-11px) rotate(2deg)}}
+
+@media(max-width:850px){.public-hero-visual{min-height:440px}.tour-experience,.provider-visual{margin-left:20px;margin-right:20px}.tour-experience-copy{width:75%;padding:36px}.provider-visual>div{align-items:flex-start;flex-direction:column;gap:8px}.provider-visual span{text-align:left}}
+@media(max-width:560px){.public-hero-visual{min-height:390px}.public-hero-visual .public-pin-guide{width:64px}.public-hero-visual .public-visual-caption{padding:24px}.public-hero-visual .public-visual-caption b{font-size:26px}.tour-experience{min-height:500px}.tour-experience:after{background:linear-gradient(0deg,#17140ff5 0%,#17140fc2 55%,transparent 100%)}.tour-experience-copy{width:100%;padding:28px}.tour-experience-copy h2{font-size:36px}.tour-pin-guide{width:64px;right:18px;top:16px}.provider-visual{height:380px}.provider-visual>div{padding:25px}.provider-visual b{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.public-hero-visual .public-pin-guide,.tour-pin-guide{animation:none}.public-hero-visual .public-experience-photo,.tour-experience>img:first-child,.tour-steps article,.tour-steps svg{transition:none}}

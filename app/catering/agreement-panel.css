@@ -1,0 +1,170 @@
+.agreement-panel {
+  margin-top: 14px;
+  border: 1px solid #d8cfc2;
+  border-radius: 12px;
+  background: #fff;
+  padding: 17px;
+  color: #25221e;
+}
+.agreement-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.agreement-title > svg {
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 9px;
+  background: #fff0e6;
+  color: #d85616;
+}
+.agreement-title > div {
+  display: grid;
+  gap: 3px;
+}
+.agreement-title span {
+  color: #696158;
+  line-height: 1.35;
+}
+.agreement-summary {
+  margin-top: 14px;
+  border: 1px solid #e4ddd2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.agreement-summary > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+  background: #f6f1e9;
+}
+.agreement-summary header > div {
+  display: grid;
+  gap: 2px;
+}
+.agreement-summary header span {
+  font-size: 13px;
+  color: #71695f;
+}
+.agreement-summary em {
+  font-style: normal;
+  border-radius: 99px;
+  background: #fff0d8;
+  color: #87500b;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.agreement-summary em.accepted {
+  background: #dff3e6;
+  color: #176033;
+}
+.agreement-summary dl {
+  margin: 0;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.agreement-summary dl > div {
+  display: grid;
+  gap: 3px;
+}
+.agreement-summary dt {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #837a6e;
+}
+.agreement-summary dd {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+.agreement-summary > small {
+  display: block;
+  padding: 0 14px 14px;
+  color: #756d63;
+}
+.change-note {
+  margin: 0 14px 14px;
+  padding: 11px;
+  background: #fff0d8;
+  border-radius: 8px;
+  color: #74440a;
+}
+.agreement-panel > form,
+.change-form {
+  display: grid;
+  gap: 11px;
+  margin-top: 14px;
+}
+.agreement-panel label {
+  display: grid;
+  gap: 5px;
+  font-weight: 850;
+}
+.agreement-panel input,
+.agreement-panel textarea {
+  width: 100%;
+  border: 1px solid #cfc5b8;
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+  background: #fff;
+}
+.agreement-panel textarea {
+  min-height: 78px;
+}
+.agreement-panel button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 13px;
+  font-weight: 900;
+}
+.agreement-panel > form > button,
+.agreement-actions > .accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #e9631e;
+  color: #fff;
+}
+.agreement-panel button svg {
+  width: 17px;
+}
+.agreement-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 12px;
+  align-items: start;
+  margin-top: 14px;
+}
+.change-form {
+  margin: 0;
+}
+.change-form button {
+  background: #eee7dc;
+  color: #3e3932;
+}
+.agreement-message {
+  color: #176033;
+  font-weight: 850;
+}
+.agreement-error {
+  color: #a52b1b;
+  font-weight: 850;
+}
+.agreement-loading {
+  color: #71695f;
+}
+@media (max-width: 700px) {
+  .agreement-summary dl,
+  .agreement-actions {
+    grid-template-columns: 1fr;
+  }
+}

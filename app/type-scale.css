@@ -1,0 +1,104 @@
+/*
+ * Readability pass: many of the original dashboard styles used 8–12px type.
+ * Keep the visual hierarchy while enforcing comfortable reading sizes.
+ */
+html{font-size:18px}
+body{font-size:1rem;line-height:1.5}
+
+:where(.app-shell,.account-page,.live-admin,.tour-page) :where(p,li,dt){
+  font-size:1rem!important;
+  line-height:1.55;
+}
+
+:where(.app-shell,.account-page,.live-admin,.tour-page) :where(span,small,em,dd){
+  font-size:.875rem!important;
+  line-height:1.45;
+}
+
+:where(.app-shell,.account-page,.live-admin,.tour-page) :where(button,a,label,input,select,textarea){
+  font-size:.95rem!important;
+  line-height:1.35;
+}
+
+:where(.app-shell,.account-page,.live-admin,.tour-page) :where(input,select,textarea,button){
+  min-height:44px;
+}
+
+:where(.app-shell,.account-page,.live-admin,.tour-page) :where(h2,h3){
+  line-height:1.15;
+}
+
+.app-shell .page-title>div>span,
+.app-shell .popup-title>div>span,
+.tour-page .tour-hero>div>span,
+.tour-page .tour-copy>span{
+  font-size:1.05rem!important;
+  line-height:1.6;
+}
+
+.app-shell .location-type,
+.app-shell .food-art span,
+.app-shell .food-art strong,
+.app-shell .booking-row.heading,
+.app-shell .card-head p,
+.account-page .auth-card>p,
+.account-page .passport-head p,
+.account-page .section-title p,
+.live-admin .live-heading p,
+.live-admin .resident-board p,
+.tour-page .tour-hero>div>p,
+.tour-page .tour-copy>p,
+.tour-page .tour-closeout p{
+  font-size:.8rem!important;
+  line-height:1.4;
+}
+
+.app-shell .promo-day>b,
+.app-shell .promo-day>i,
+.app-shell .promo-day article span,
+.app-shell .promo-day article p,
+.app-shell .public-calendar>small,
+.app-shell .calendar-key,
+.app-shell .privacy-state,
+.app-shell .privacy-panel p,
+.app-shell .privacy-choices span{
+  font-size:.78rem!important;
+}
+
+@media(max-width:720px){
+  html{font-size:17px}
+  .top-actions .account-button[href="/tour"]{display:none}
+  :where(.app-shell,.account-page,.live-admin,.tour-page) :where(button,a,label,input,select,textarea){
+    font-size:1rem!important;
+  }
+}
+
+.event-builder select{
+  border:1px solid #d9d4cb;
+  border-radius:7px;
+  padding:10px;
+  background:#faf8f4;
+  color:#222;
+  width:100%;
+}
+
+@media(max-width:620px){
+  .event-type{flex-direction:column}
+  .event-type button{width:100%;justify-content:flex-start}
+}
+
+.kitchen-app-cards{grid-template-columns:1fr!important}
+.kitchen-app-cards article>p{color:#655f57}
+.kitchen-app-cards footer{display:grid!important;grid-template-columns:1fr 1fr 1.5fr}
+.kitchen-app-cards footer button:last-child{background:#207a55;color:#fff}
+.owner-chip button{border:0;background:none;color:#f58b4e;padding:8px 0;display:flex;gap:7px;align-items:center;font-weight:800;justify-content:flex-start}
+.admin-auth-state{min-height:100vh;background:#191917;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+.admin-auth-state img{width:min(260px,70vw);max-height:120px;object-fit:contain;margin-bottom:25px}
+.admin-auth-state h1{font:700 44px/1.05 Georgia,serif;margin:0 0 12px}
+.admin-auth-state p{color:#c8c2b8;max-width:560px}
+.admin-auth-state>a:not(.auth-home),.admin-auth-state button{border:0;background:#ff5a12;color:#fff;padding:14px 18px;border-radius:10px;text-decoration:none;font-weight:900;margin-top:14px}
+.admin-auth-state .auth-home{color:#bbb;text-decoration:none;margin-top:18px}
+
+@media(max-width:620px){
+  .kitchen-app-cards footer{grid-template-columns:1fr}
+}

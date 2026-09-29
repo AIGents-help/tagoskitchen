@@ -1,0 +1,12 @@
+.network-page .public-main { max-width: 1120px; }
+.network-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, 1fr); margin-top: 38px; }
+.network-grid article { background: #fff; border: 1px solid #ded6ca; border-radius: 18px; padding: 28px; }
+.network-grid article > svg { background: #fff0e7; border-radius: 12px; color: #dc5718; height: 48px; padding: 11px; width: 48px; }
+.network-grid article > p { color: #bd4b13; font-size: .78rem; font-weight: 900; letter-spacing: .12em; margin: 20px 0 7px; }
+.network-grid h2 { font: 700 1.75rem/1.08 Georgia, serif; margin: 0 0 12px; }
+.network-grid article > span { color: #686158; display: block; font-size: 1rem; line-height: 1.6; }
+.network-grid a { align-items: center; color: #c65317; display: inline-flex; font-weight: 900; gap: 4px; margin-top: 22px; text-decoration: none; }
+.network-grid a svg { width: 17px; }
+.network-note { align-items: center; background: #24211d; border-radius: 16px; color: #fff; display: flex; gap: 16px; margin-top: 22px; padding: 24px 28px; }
+.network-note span { color: #d5cec4; line-height: 1.5; }
+@media(max-width: 720px) { .network-grid { grid-template-columns: 1fr; } .network-note { align-items: flex-start; flex-direction: column; } }

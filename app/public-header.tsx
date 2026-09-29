@@ -1,0 +1,2 @@
+/* eslint-disable @next/next/no-img-element */
+export default function PublicHeader(){return <header className="public-header"><a href="/"><img src="/tagos-kitchen-logo.png" alt="TaGo's"/></a><nav><a href="/food-businesses">Find a Chef</a><a href="/?view=discover">Find a Kitchen</a><a href="/food-trucks">Food Trucks</a><a href="/catering">Post What You Need</a><a href="/network">Join the Network</a><a href="/account" className="primary-link">Join / Log in</a></nav></header>}

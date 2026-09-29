@@ -1,0 +1,14 @@
+create index if not exists availability_blocks_created_by_idx on public.availability_blocks(created_by);
+create index if not exists availability_blocks_equipment_idx on public.availability_blocks(equipment_resource_id);
+create index if not exists chef_assignments_business_idx on public.chef_assignments(business_id);
+create index if not exists chef_assignments_created_by_idx on public.chef_assignments(created_by);
+create index if not exists chef_assignments_equipment_idx on public.chef_assignments(equipment_resource_id);
+create index if not exists promotions_kitchen_idx on public.promotions(kitchen_id);
+create index if not exists promotions_business_idx on public.promotions(business_id);
+create index if not exists promotions_created_by_idx on public.promotions(created_by);
+create index if not exists maintenance_tickets_equipment_idx on public.maintenance_tickets(equipment_resource_id);
+create index if not exists maintenance_tickets_opened_by_idx on public.maintenance_tickets(opened_by);
+create index if not exists booking_transactions_booking_idx on public.booking_transactions(booking_id);
+create index if not exists booking_transactions_created_by_idx on public.booking_transactions(created_by);
+create index if not exists provider_payouts_transaction_idx on public.provider_payouts(booking_transaction_id);
+create index if not exists provider_payouts_created_by_idx on public.provider_payouts(created_by);

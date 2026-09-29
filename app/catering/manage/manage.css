@@ -1,0 +1,217 @@
+.manager-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.manager-title > a {
+  background: #ee6c22;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 14px 18px;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+.opportunity-list {
+  display: grid;
+  gap: 22px;
+  margin-top: 32px;
+}
+.opportunity {
+  background: #fff;
+  border: 1px solid #ded6ca;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.opportunity > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+}
+.opportunity h2 {
+  font:
+    700 30px/1.1 Georgia,
+    serif;
+  margin: 8px 0;
+}
+.opportunity header p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #625c53;
+  margin: 0;
+}
+.opportunity header svg {
+  width: 18px;
+}
+.request-status {
+  display: inline-block;
+  border-radius: 999px;
+  background: #eee8df;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.request-status.open {
+  background: #e5f5eb;
+  color: #176033;
+}
+.request-status.matched {
+  background: #fff0d8;
+  color: #8d4d00;
+}
+.opportunity details {
+  border-block: 1px solid #eee7dc;
+  padding: 15px 24px;
+}
+.opportunity summary {
+  font-weight: 900;
+  cursor: pointer;
+}
+.request-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 15px;
+}
+.request-detail-grid span,
+.menu-proposal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  white-space: pre-line;
+}
+.proposal-list {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+}
+.proposal-list > article {
+  border: 1px solid #dcd3c6;
+  border-radius: 12px;
+  padding: 18px;
+}
+.proposal-list > article.selected-proposal {
+  border: 2px solid #21845a;
+  background: #f2fbf5;
+}
+.proposal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+.proposal-head h3 {
+  font-size: 20px;
+  margin: 0;
+}
+.proposal-head strong {
+  font-size: 22px;
+}
+.menu-proposal {
+  background: #f3eee6;
+  border-radius: 8px;
+  padding: 13px;
+}
+.proposal-list button,
+.opportunity > footer button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+.opportunity > footer button.complete-job {
+  background: #176033;
+  color: #fff;
+}
+.proposal-list button {
+  background: #ee6c22;
+  color: #fff;
+  margin-top: 14px;
+}
+.proposal-list em {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #176033;
+  font-style: normal;
+  font-weight: 900;
+  margin-top: 13px;
+}
+.no-proposals {
+  padding: 22px;
+  background: #f7f4ee;
+  border-radius: 10px;
+  color: #625c53;
+}
+.match-handoff {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #e8f6ee;
+  color: #174f32;
+}
+.match-handoff > span {
+  color: #3d5c4b;
+}
+.match-handoff > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 3px;
+}
+.match-handoff a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border-radius: 8px;
+  background: #fff;
+  color: #174f32;
+  font-weight: 900;
+  text-decoration: none;
+}
+.match-handoff svg {
+  width: 17px;
+  height: 17px;
+}
+.opportunity > footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 24px 24px;
+}
+.opportunity > footer button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1ece4;
+  color: #5b3020;
+}
+@media (max-width: 700px) {
+  .manager-title,
+  .opportunity > header,
+  .proposal-head {
+    align-items: start;
+    flex-direction: column;
+  }
+  .manager-title > a {
+    width: 100%;
+    text-align: center;
+  }
+  .request-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .opportunity > footer {
+    flex-direction: column;
+  }
+  .opportunity > footer button {
+    justify-content: center;
+  }
+}
