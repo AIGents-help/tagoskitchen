@@ -25,8 +25,8 @@ Commercial-kitchen marketplace and operating system for independent food busines
 
 ## Application source and deployment
 
-This repository includes the Next.js application used by the current TaGo's site. The
-`codex/site-source-to-vercel` branch prepares it for a Git-backed Vercel build.
+This repository includes the Next.js application used by the current TaGo's site.
+This branch prepares it for a Git-backed Vercel build.
 Use Node.js 22 or later and `corepack pnpm install --frozen-lockfile`, then
 `corepack pnpm build`. Connect the existing Vercel project to this repository and
 verify a preview deployment before moving the production domain. The current
